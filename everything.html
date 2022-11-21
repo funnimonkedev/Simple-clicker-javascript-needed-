@@ -1,0 +1,222 @@
+<!doctype html>
+
+<html>
+    <head>
+        <meta charset="ANSI">
+
+        <title>Speedrun clicker game</title>
+
+    </head>
+   <body>
+       <p><em> regular$: </em> </p>
+    <p id="sus">0$</p>
+<br>
+    <button id="cookie" onclick="clicked()" onmouseup="E -= 1;"> <strong> Gain $  </strong></button>
+    <br>
+         
+    <br>
+         <br>
+         <br>
+         <br>
+         <br>
+    <button id="Upg1" onclick="Bought()"> Upgrade click power: 100$ </button>
+     <button id="upg8" onclick="x10Bought()" <em>  click power upgrade x10| 1,000$ </em> </button>
+     <button id="upg6" onclick="x100Bought()" <em>  click power upgrade x100| 10,000$ </em> </button>
+       <button id="Upg4" onclick="Bought3()"> Buy Mini gamble Ticket| 100$| money gain min/max (0/200)  </button>
+       <button id="Upg2" onclick="Bought2()"> Buy Gamble Ticket: 200$| money gain min/max (0/400) </button>
+       <button id="Upg3" onclick="MegaTicket()"><strong>Buy Mega gamble Ticket| 300$| money gain min/max (0/600) </strong></button>
+       <button id="upg5" onclick="MEGAMIND()"<strong> BUY MEGAMIND GAMBLE TICKET ULTIMATE STOCK LIMITED SUSSINESS EDITION 1,000$| money gain min/max (0/2100) </button>
+        <button id="upg9" onclick="multiplier2()"> Buy Click multiplier 50,000$| multiplies your click power upgrade(s) by 1.3 </button>
+           <button id="upg7" onclick="multiplier()"<strong> <em> Buy Click multiplier 300,000$| Doubles your click power upgrade(s)</em> </strong> </button>
+           <button id="APG" onclick="Stylz()"><em> Make "Gain$" buttons border dissapear| 800$ </em></button>
+          
+           <br>
+           <br>
+           <br>
+           <br>
+           <br>
+           <br>
+           <br>
+           <br>
+           <br>
+           <br>
+           <br>
+           <h2> Update Log(s) </h2>
+           <h5> Added x10 click upgraders and x100 click power upgraders, and a click MULTIPLIER. 
+               ------Older update log(s)------
+               Added new gamble tickets (mini, mega, MEGAMIND). Added new styling for the button
+                     -------Even Older Update log(s)------
+               added a gamble ticket and a click power upgrader
+                    --------Very Old Update log(s)--------
+               added a working button and stylized it </h5>
+               <br>
+               <br>
+               <br>
+               
+
+
+    <style>
+        #sus{
+            font-family: fantasy;
+            color: brown;
+            
+        }
+
+        #Upg1{
+
+        }
+        
+        #cookie{
+           
+            font-family: cursive;
+            border-radius: 60%;
+            background-color: yellow;
+            box-shadow: 5px 5px 5px;
+            width: 90px;
+            height: 90px;
+        }
+
+         #cookie:hover{
+
+            background-color: gold;
+  
+        }
+
+         #cookie:active{
+
+            background-color: orange;
+            box-shadow: 2px 2px 2px;
+            transform: translateY(3px);
+        }
+
+        #upg5 {
+        background-color: red;
+        box-shadow: 3px 3px;
+        font-family: fantasy
+        }
+        
+
+        #upg7 {
+        background-color: orange;
+        box-shadow: 1px 1px;
+        font-family: cursive
+        border-radius: 8%;
+        }
+
+
+
+                 
+    </style>
+        
+<script>
+let i = 0;
+let A = 1;
+var E = 0;
+
+
+function clicked() {
+i += A;
+E = 1;
+document.getElementById('sus').innerHTML = i + "$";
+}
+
+    function Bought() {
+        if (i>=100) {
+            i -= 100;
+        A++;
+            document.getElementById('sus').innerHTML = i + "$";
+        }
+    }
+    
+        function Bought2() {
+        if (i>=200) {
+            i -= 200;
+            i += Math.floor(Math.random() * 400),
+            document.getElementById('sus').innerHTML = i + "$";
+        }
+    }
+
+            function Bought3() {
+        if (i>=100) {
+            i -= 100;
+             i += Math.floor(Math.random() * 200),
+           document.getElementById('sus').innerHTML = i + "$";
+        }
+    }
+
+            function MegaTicket() {
+        if (i>=300) {
+            i -= 300
+             i += Math.floor(Math.random() * 600)
+           document.getElementById('sus').innerHTML = i + "$";
+        }
+    }
+
+
+
+                function MEGAMIND() {
+        if (i>=1000) {
+            i -= 1000
+             i += Math.floor(Math.random() * 2100)
+           document.getElementById('sus').innerHTML = i + "$";
+        }
+    }
+
+
+
+    function x10Bought() {
+         if (i>=1000) {
+            i -= 1000;
+        A+= 10;
+            document.getElementById('sus').innerHTML = i + "$";
+        }
+    }
+
+
+
+    function x100Bought() {
+
+ if (i>=10000) {
+            i -= 10000;
+        A+= 100;
+            document.getElementById('sus').innerHTML = i + "$";
+        }
+
+    }
+
+
+
+    function multiplier()  {
+    if (i>=300000) {
+            i -= 300000;
+        A *= 2;
+            document.getElementById('sus').innerHTML = i + "$";
+        }
+    
+    }
+
+    function multiplier2()  {
+    if (i>=50000) {
+            i -= 50000;
+        A *= 1.3;
+            document.getElementById('sus').innerHTML = i + "$";
+        }
+    
+    }
+
+
+  function Stylz()  {
+    if (i>=800) {
+            i -= 800;
+            document.getElementById('cookie').style.border = "0px";
+           document.getElementById('sus').innerHTML = i + "$";
+        }
+    
+    }
+
+    </script>
+    <br>
+</body></html>
+
+</html>
+
